@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">949878690996-m6ojbfhergkks1bgcuq4d44ol2feud3q.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">949878690996</string>
+    <string name="google_api_key" translatable="false">AIzaSyCsSOmqJvSlTYSqq91vih5Sr7_rFg6UmhU</string>
+    <string name="google_app_id" translatable="false">1:949878690996:android:ece5f686ab09aca53e73e1</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCsSOmqJvSlTYSqq91vih5Sr7_rFg6UmhU</string>
+    <string name="google_storage_bucket" translatable="false">scrap-scrap.appspot.com</string>
+    <string name="project_id" translatable="false">scrap-scrap</string>
+</resources>
