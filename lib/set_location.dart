@@ -63,8 +63,8 @@ class _SetAddressState extends State<SetAddress> {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: <Widget>[
                         //container for floor
-                        Container(
-                          margin:
+                        Container( 
+                          padding:
                               const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
                           child: TextFormField(
                             controller: roomNumberController,
@@ -82,7 +82,7 @@ class _SetAddressState extends State<SetAddress> {
                         ),
                         //Container for street
                         Container(
-                          margin:
+                          padding:
                               const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
                           child: TextFormField(
                             controller: streetController,
@@ -103,7 +103,7 @@ class _SetAddressState extends State<SetAddress> {
                         ),
                         //Container for barangay
                         Container(
-                          margin:
+                          padding:
                               const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
                           child: TextFormField(
                             controller: barangayController,
@@ -124,7 +124,7 @@ class _SetAddressState extends State<SetAddress> {
                         ),
                         //Container for city
                         Container(
-                          margin:
+                          padding:
                               const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
                           child: TextFormField(
                             controller: cityController,
@@ -145,7 +145,7 @@ class _SetAddressState extends State<SetAddress> {
                         ),
                         //Container for province
                         Container(
-                          margin:
+                          padding:
                               const EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
                           child: TextFormField(
                             controller: provinceController,
@@ -166,7 +166,7 @@ class _SetAddressState extends State<SetAddress> {
                         ),
                         //Container for more description
                         Container(
-                          margin:
+                          padding:
                               const EdgeInsets.fromLTRB(8.0, 11.0, 8.0, 10.0),
                           child: TextFormField(
                             controller: moreDescriptionController,
@@ -190,34 +190,19 @@ class _SetAddressState extends State<SetAddress> {
                     ),
                   ),
                   //A free space container
-                  Container(
-                    padding: const EdgeInsets.all(57.0),
-                  ),
-                  //A container with one border and text button
-                  Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 4.0),
-                    padding: const EdgeInsetsDirectional.fromSTEB(40, 8, 40, 8),
-                    decoration: const BoxDecoration(
-                        border: Border(
-                      top: BorderSide(color: Colors.black38),
-                    )),
-                    child: TextButton(
-                      style: TextButton.styleFrom(
-                        backgroundColor: const Color(0xFF27AE60),
-                        shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                        ),
-                      ),
-                      child: const Text(
-                        'Save and Continue',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w900,
-                        ),
-                      ),
-                      //here the code for updating the new database
-                      onPressed: () {
-                        if (_formkey.currentState!.validate()) {
+                  // Container(
+                  //   padding: const EdgeInsets.all(57.0),
+                  // ),
+                  
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          if (_formkey.currentState!.validate()) {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
                               content: Text('Completely Updated'),
@@ -237,15 +222,12 @@ class _SetAddressState extends State<SetAddress> {
                                 builder: (context) => const UserAddress()),
                           );
                         }
-                      },
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
+        },
+        label: const Text('Edit Address'),
+        icon: const Icon(Icons.edit),
+        backgroundColor: const Color(0xff27ae60),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
